@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity Resort | АДМІН-ПАНЕЛЬ</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="admin-wrapper">
+    <aside class="sidebar">
+        <h3><i class="fas fa-cogs"></i> Unity Admin</h3>
+        <nav>
+            <ul>
+                <li><a href="#"><i class="fas fa-tachometer-alt"></i> Дашборд</a></li>
+                <li class="active"><a href="#"><i class="fas fa-bed"></i> Номери (CRUD)</a></li>
+                <li><a href="#"><i class="fas fa-calendar-alt"></i> Бронювання</a></li>
+                <li><a href="#"><i class="fas fa-users"></i> Користувачі</a></li>
+                <li><a href="#"><i class="fas fa-concierge-bell"></i> Послуги</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Вийти</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="admin-content">
+        <h1>Керування Номерами (CRUD)</h1>
+
+        <button class="btn-add-new"><i class="fas fa-plus"></i> Додати Новий Номер</button>
+
+        <table class="admin-table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Назва</th>
+                <th>Ціна/ніч</th>
+                <th>Стан Номеру</th>
+                <th>Дії</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Стандартний номер</td>
+                <td>₴2,500</td>
+                <td><span class="room-status status-available">Вільний</span></td>
+                <td>
+                    <button class="btn-action btn-edit"><i class="fas fa-edit"></i> Редагувати</button>
+                    <button class="btn-action btn-toggle-status" onclick="toggleStatus(this)"><i class="fas fa-sync-alt"></i> Змінити стан</button>
+                    <button class="btn-action btn-delete"><i class="fas fa-trash-alt"></i> Видалити</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Люкс з терасою</td>
+                <td>₴4,200</td>
+                <td><span class="room-status status-booked">Заброньовано</span></td>
+                <td>
+                    <button class="btn-action btn-edit"><i class="fas fa-edit"></i> Редагувати</button>
+                    <button class="btn-action btn-toggle-status" onclick="toggleStatus(this)"><i class="fas fa-sync-alt"></i> Змінити стан</button>
+                    <button class="btn-action btn-delete"><i class="fas fa-trash-alt"></i> Видалити</button>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Сімейний котедж</td>
+                <td>₴6,800</td>
+                <td><span class="room-status status-maintenance">Ремонт</span></td>
+                <td>
+                    <button class="btn-action btn-edit"><i class="fas fa-edit"></i> Редагувати</button>
+                    <button class="btn-action btn-toggle-status" onclick="toggleStatus(this)"><i class="fas fa-sync-alt"></i> Змінити стан</button>
+                    <button class="btn-action btn-delete"><i class="fas fa-trash-alt"></i> Видалити</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </main>
+</div>
+
+<script>
+    // Імітація зміни стану номеру
+    function toggleStatus(button) {
+        const row = button.closest('tr');
+        const statusSpan = row.querySelector('.room-status');
+        const currentStatus = statusSpan.textContent.trim();
+
+        let newText;
+        let newClass;
+
+        if (currentStatus === 'Вільний') {
+            newText = 'Заброньовано';
+            newClass = 'status-booked';
+        } else if (currentStatus === 'Заброньовано') {
+            newText = 'Ремонт';
+            newClass = 'status-maintenance';
+        } else {
+            newText = 'Вільний';
+            newClass = 'status-available';
+        }
+
+        // Оновлюємо відображення
+        statusSpan.textContent = newText;
+        statusSpan.className = `room-status ${newClass}`;
+
+        alert(`Стан номеру "${row.cells[1].textContent}" змінено на: ${newText}`);
+    }
+</script>
+</body>
+</html>

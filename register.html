@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity Resort | Реєстрація</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<section class="login-page">
+    <div class="login-container">
+        <h2>Реєстрація Користувача <i class="fas fa-user-plus"></i></h2>
+        <p class="hero-subtitle" style="color: var(--white);">Створіть свій обліковий запис гостя</p>
+
+        <form action="#">
+            <div class="form-group">
+                <label for="name">Ваше Ім'я</label>
+                <input type="text" id="name" placeholder="Іван" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Електронна пошта</label>
+                <input type="email" id="email" placeholder="your@email.com" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Пуроль</label>
+                <input type="password" id="password" placeholder="Створіть пароль" class="form-input" required>
+            </div>
+
+            <button type="button" class="btn-primary btn-login" onclick="window.location.href='user.html'">
+                <i class="fas fa-user-plus"></i> Зареєструватись
+            </button>
+
+            <p class="login-message">
+                Вже зареєстрований? <a href="login.html" style="color: var(--accent-green);">Увійти</a> | <a href="index.html" style="color: var(--accent-green);">не тупім</a>
+            </p>
+        </form>
+    </div>
+</section>
+
+<div class="nav-overlay"></div>
+</body>
+</html>

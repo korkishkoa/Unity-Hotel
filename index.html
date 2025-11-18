@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity Resort</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2><i class="fas fa-mountain"></i> Unity Resort</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Головна</a></li>
+                <li><a href="#rooms">Номери</a></li>
+                <li><a href="#services">Послуги</a></li>
+                <li><a href="#gallery">Галерея</a></li>
+                <li><a href="login.html">Вхід</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-book" onclick="window.location.href='register.html'">Реєстрація</button>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">Потужний відпочинок у Карпатах</h1>
+        <p class="hero-subtitle">Неперевершений кайф серед природи</p>
+        <button class="btn-primary" onclick="window.location.href='#rooms'">Переглянути номери</button>
+    </div>
+    <div class="hero-booking">
+        <div class="booking-form">
+            <h3>Забронювати зараз</h3>
+            <div class="form-group">
+                <label>Заїзд</label>
+                <input type="date" class="form-input">
+            </div>
+            <div class="form-group">
+                <label>Виїзд</label>
+                <input type="date" class="form-input">
+            </div>
+            <div class="form-group">
+                <label>Гості</label>
+                <select class="form-input">
+                    <option>1 гість</option>
+                    <option>2 гості</option>
+                    <option>3 гості</option>
+                    <option>4+ гостей</option>
+                </select>
+            </div>
+            <button class="btn-search">Знайти номер</button>
+        </div>
+    </div>
+</section>
+
+<section id="rooms" class="rooms">
+    <div class="container">
+        <h2 class="section-title">Наші Номери</h2>
+        <div class="filters">
+            <button class="filter-btn active">Всі</button>
+            <button class="filter-btn">Стандарт</button>
+            <button class="filter-btn">Люкс</button>
+            <button class="filter-btn">Котедж</button>
+        </div>
+        <div class="rooms-grid">
+            <div class="room-card">
+                <div class="room-image">
+                    <img src="images/2.jpg" alt="Стандартний номер">
+                    <div class="room-price">₴2,500/ніч</div>
+                    <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                </div>
+                <div class="room-info">
+                    <h3>Стандартний номер</h3>
+                    <p>Комфортний номер з видом на гори</p>
+                    <div class="room-features">
+                        <span><i class="fas fa-user"></i> 2 гості</span>
+                        <span><i class="fas fa-ruler-combined"></i> 25 м²</span>
+                        <span><i class="fas fa-wifi"></i> Wi-Fi</span>
+                    </div>
+                    <div class="room-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.5 (128 відгуків)</span>
+                    </div>
+                    <button class="btn-book-room">Забронювати</button>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-image">
+                    <img src="images/3.jpg" alt="Люкс номер">
+                    <div class="room-price">₴4,200/ніч</div>
+                    <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                </div>
+                <div class="room-info">
+                    <h3>Люкс з терасою</h3>
+                    <p>Розкішний номер з власною терасою</p>
+                    <div class="room-features">
+                        <span><i class="fas fa-user"></i> 3 гості</span>
+                        <span><i class="fas fa-ruler-combined"></i> 45 м²</span>
+                        <span><i class="fas fa-hot-tub"></i> Джакузі</span>
+                    </div>
+                    <div class="room-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>5.0 (69 відгуків)</span>
+                    </div>
+                    <button class="btn-book-room">Забронювати</button>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-image">
+                    <img src="images/4.jpg" alt="Котедж">
+                    <div class="room-price">₴14,88/ніч</div>
+                    <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                </div>
+                <div class="room-info">
+                    <h3>Сімейний котедж</h3>
+                    <p>Просторий котедж для сімейного відпочинку</p>
+                    <div class="room-features">
+                        <span><i class="fas fa-user"></i> 6 гостей</span>
+                        <span><i class="fas fa-ruler-combined"></i> 85 м²</span>
+                        <span><i class="fas fa-fireplace"></i> Камін</span>
+                    </div>
+                    <div class="room-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.7 (64 відгуки)</span>
+                    </div>
+                    <button class="btn-book-room">Забронювати</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="services">
+    <div class="container">
+        <h2 class="section-title">Наші Послуги</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-utensils"></i>
+                <h3>Ресторан</h3>
+                <p>Українська та монгольська кухня з локальних продуктів</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-spa"></i>
+                <h3>Спа-центр</h3>
+                <p>Сауна, масаж та відновлювальні процедури</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-hiking"></i>
+                <h3>Екскурсії</h3>
+                <p>Гірські походи та екскурсії по Карпатах</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-swimming-pool"></i>
+                <h3>Басейн</h3>
+                <p>Критий басейн з видом на гори</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="gallery">
+    <div class="container">
+        <h2 class="section-title">Галерея</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/5.jpg" alt="Готель">
+            </div>
+            <div class="gallery-item">
+                <img src="images/6.jpg" alt="Номер">
+            </div>
+            <div class="gallery-item">
+                <img src="images/7.jpg" alt="Ресторан">
+            </div>
+            <div class="gallery-item">
+                <img src="images/8.jpg" alt="Басейн">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">Контакти</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Unity Resort</h3>
+                <p><i class="fas fa-map-marker-alt"></i> с. Пупкіни, Білоцерківська область</p>
+                <p><i class="fas fa-phone"></i> +380 98 623 7943</p>
+                <p><i class="fas fa-envelope"></i> info@unityresort.com</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Написати нам</h3>
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Ваше ім'я" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Ваш email" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Повідомлення" class="form-input" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Надіслати</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Unity Resort</h3>
+                <p>Потужний відпочинок у серці Карпат</p>
+            </div>
+            <div class="footer-section">
+                <h4>Швидкі посилання</h4>
+                <ul>
+                    <li><a href="#home">Головна</a></li>
+                    <li><a href="#rooms">Номери</a></li>
+                    <li><a href="#services">Послуги</a></li>
+                    <li><a href="#contact">Контакти</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Unity Resort. Всі права не захищені.</p>
+        </div>
+    </div>
+</footer>
+
+<div class="nav-overlay"></div>
+
+<script src="launch.js"></script>
+</body>
+</html>

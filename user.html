@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity Resort | Профіль Користувача</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2><i class="fas fa-mountain"></i> Unity Resort</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="index.html#rooms">Номери</a></li>
+                <li><a href="index.html#services">Послуги</a></li>
+                <li><a href="user.html" class="active-profile"><i class="fas fa-user-circle"></i> Профіль</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-book" onclick="window.location.href='login.html'">Вийти</button>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<section id="profile" class="profile-section">
+    <div class="container profile-container">
+        <div class="profile-menu">
+            <ul>
+                <li class="active"><a href="#"><i class="fas fa-id-badge"></i> Мій Профіль</a></li>
+                <li><a href="#"><i class="fas fa-calendar-alt"></i> Мої Бронювання</a></li>
+                <li><a href="#"><i class="fas fa-history"></i> Історія Дій</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Налаштування</a></li>
+            </ul>
+        </div>
+
+        <div class="profile-content">
+            <h2 class="profile-header">Привіт, Сергійло Михайлович!</h2>
+            <p class="hero-subtitle">Ласкаво просимо до вашого персонального кабінету.</p>
+
+            <div class="info-block">
+                <h3><i class="fas fa-calendar-check"></i> Майбутні Бронювання</h3>
+                <div class="booking-card">
+                    <h4>Люкс з терасою</h4>
+                    <p><i class="fas fa-plane-arrival"></i> Заїзд: 15.12.2025</p>
+                    <p><i class="fas fa-plane-departure"></i> Виїзд: 22.12.2025</p>
+                    <p><i class="fas fa-money-bill-wave"></i> Статус: Оплочено</p>
+                </div>
+                <div class="booking-card">
+                    <h4>Стандартний номер</h4>
+                    <p><i class="fas fa-plane-arrival"></i> Заїзд: 05.01.2026</p>
+                    <p><i class="fas fa-plane-departure"></i> Виїзд: 07.01.2026</p>
+                    <p><i class="fas fa-money-bill-wave"></i> Статус: Очікує підтвердження</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-bottom">
+            <p>&copy; 2025 Unity Resort. Всі права захищені.</p>
+        </div>
+    </div>
+</footer>
+
+<div class="nav-overlay"></div>
+
+<script src="launch.js"></script>
+</body>
+</html>
